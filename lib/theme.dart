@@ -11,6 +11,10 @@ TextStyle headingLogo = GoogleFonts.poppins(
   fontWeight: FontWeight.w700,
   color: primaryColor,
 );
+TextStyle subRegular = GoogleFonts.poppins(
+  fontWeight: FontWeight.w400,
+  color: primaryColor,
+);
 TextStyle headingMain = GoogleFonts.poppins(
   fontWeight: FontWeight.w700,
   color: blackColor,

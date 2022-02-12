@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projek_kpam_lifehealth/page/home_page.dart';
 import 'package:projek_kpam_lifehealth/page/register_page.dart';
 import 'package:projek_kpam_lifehealth/theme.dart';
 
@@ -89,7 +90,14 @@ class _LoginPageState extends State<LoginPage> {
                             borderRadius: BorderRadius.circular(16),
                           ),
                           color: primaryColor,
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => HomePage(),
+                              ),
+                            );
+                          },
                           child: Text(
                             'Login',
                             style: TextStyle(
