@@ -80,6 +80,274 @@ class _HomePageState extends State<HomePage> {
                 ),
                 textAlign: TextAlign.left,
               ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      height: 100,
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 1,
+                            blurRadius: 7,
+                            offset: Offset(0, 3), // changes position of shadow
+                          ),
+                        ],
+                        color: Color(0xffFFFFFF),
+                        border: Border.all(
+                          color: Color(0xff9151ED),
+                        ),
+                        borderRadius: BorderRadius.circular(
+                          18,
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            "assets/images/icon3.png",
+                          ),
+                          const SizedBox(
+                            height: 14,
+                          ),
+                          Text(
+                            "Vaksinasi",
+                            style: subRegular.copyWith(
+                              fontSize: 13,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Expanded(
+                    child: Container(
+                      height: 100,
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 1,
+                            blurRadius: 7,
+                            offset: Offset(0, 3), // changes position of shadow
+                          ),
+                        ],
+                        color: Color(0xffFFFFFF),
+                        border: Border.all(
+                          color: Color(0xff9151ED),
+                        ),
+                        borderRadius: BorderRadius.circular(
+                          18,
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            "assets/images/icon4.png",
+                          ),
+                          const SizedBox(
+                            height: 14,
+                          ),
+                          Text(
+                            "Konsultasi",
+                            style: subRegular.copyWith(
+                              fontSize: 13,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 20),
+                  Expanded(
+                    child: Container(
+                      height: 100,
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 1,
+                            blurRadius: 7,
+                            offset: Offset(0, 3), // changes position of shadow
+                          ),
+                        ],
+                        color: Color(0xffFFFFFF),
+                        border: Border.all(
+                          color: Color(0xff9151ED),
+                        ),
+                        borderRadius: BorderRadius.circular(
+                          18,
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            "assets/images/icon5.png",
+                          ),
+                          const SizedBox(
+                            height: 14,
+                          ),
+                          Text(
+                            "Donor Darah",
+                            style: subRegular.copyWith(
+                              fontSize: 13,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      height: 100,
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 1,
+                            blurRadius: 7,
+                            offset: Offset(0, 3), // changes position of shadow
+                          ),
+                        ],
+                        color: Color(0xffFFFFFF),
+                        border: Border.all(
+                          color: Color(0xff9151ED),
+                        ),
+                        borderRadius: BorderRadius.circular(
+                          18,
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            "assets/images/icon6.png",
+                          ),
+                          const SizedBox(
+                            height: 14,
+                          ),
+                          Text(
+                            "Antrean Klinik",
+                            style: subRegular.copyWith(
+                              fontSize: 13,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Expanded(
+                    child: Container(
+                      height: 100,
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 1,
+                            blurRadius: 7,
+                            offset: Offset(0, 3), // changes position of shadow
+                          ),
+                        ],
+                        color: Color(0xffFFFFFF),
+                        border: Border.all(
+                          color: Color(0xff9151ED),
+                        ),
+                        borderRadius: BorderRadius.circular(
+                          18,
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            "assets/images/icon7.png",
+                          ),
+                          const SizedBox(
+                            height: 14,
+                          ),
+                          Text(
+                            "Rumah Sakit",
+                            style: subRegular.copyWith(
+                              fontSize: 13,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 20),
+                  Expanded(
+                    child: Container(
+                      height: 100,
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 1,
+                            blurRadius: 7,
+                            offset: Offset(0, 3), // changes position of shadow
+                          ),
+                        ],
+                        color: Color(0xffFFFFFF),
+                        border: Border.all(
+                          color: Color(0xff9151ED),
+                        ),
+                        borderRadius: BorderRadius.circular(
+                          18,
+                        ),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            "assets/images/icon8.png",
+                          ),
+                          const SizedBox(
+                            height: 8,
+                          ),
+                          Text(
+                            "Lainnya",
+                            style: subRegular.copyWith(
+                              fontSize: 13,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  "Artikel Seputar Kesehatan",
+                  style: blackReguler.copyWith(
+                    fontSize: 16,
+                  ),
+                ),
+              )
             ],
           ),
         ),
