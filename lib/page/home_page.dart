@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:projek_kpam_lifehealth/theme.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -18,9 +19,9 @@ class _HomePageState extends State<HomePage> {
   final CarouselSlider autoPlayImage = CarouselSlider(
     items: imgSlider.map((fileImage) {
       return Container(
-        margin: EdgeInsets.all(5.0),
+        margin: const EdgeInsets.all(5.0),
         child: ClipRRect(
-          borderRadius: BorderRadius.all(Radius.circular(10)),
+          borderRadius: const BorderRadius.all(Radius.circular(10)),
           child: Image.asset(
             'assets/images/${fileImage}',
             width: 10000,
@@ -39,10 +40,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: Color(0xffE5E5E5),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               const SizedBox(
                 height: 25,
@@ -94,13 +97,11 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.grey.withOpacity(0.5),
                             spreadRadius: 1,
                             blurRadius: 7,
-                            offset: Offset(0, 3), // changes position of shadow
+                            offset: const Offset(
+                                0, 3), // changes position of shadow
                           ),
                         ],
-                        color: Color(0xffFFFFFF),
-                        border: Border.all(
-                          color: Color(0xff9151ED),
-                        ),
+                        color: const Color(0xffFFFFFF),
                         borderRadius: BorderRadius.circular(
                           18,
                         ),
@@ -110,6 +111,8 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           Image.asset(
                             "assets/images/icon3.png",
+                            width: 40,
+                            height: 40,
                           ),
                           const SizedBox(
                             height: 14,
@@ -136,13 +139,11 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.grey.withOpacity(0.5),
                             spreadRadius: 1,
                             blurRadius: 7,
-                            offset: Offset(0, 3), // changes position of shadow
+                            offset: const Offset(
+                                0, 3), // changes position of shadow
                           ),
                         ],
-                        color: Color(0xffFFFFFF),
-                        border: Border.all(
-                          color: Color(0xff9151ED),
-                        ),
+                        color: const Color(0xffFFFFFF),
                         borderRadius: BorderRadius.circular(
                           18,
                         ),
@@ -176,13 +177,11 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.grey.withOpacity(0.5),
                             spreadRadius: 1,
                             blurRadius: 7,
-                            offset: Offset(0, 3), // changes position of shadow
+                            offset: const Offset(
+                                0, 3), // changes position of shadow
                           ),
                         ],
-                        color: Color(0xffFFFFFF),
-                        border: Border.all(
-                          color: Color(0xff9151ED),
-                        ),
+                        color: const Color(0xffFFFFFF),
                         borderRadius: BorderRadius.circular(
                           18,
                         ),
@@ -208,6 +207,33 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
+              ElevatedButton(
+                child: const Text('showModalBottomSheet'),
+                onPressed: () {
+                  showModalBottomSheet<void>(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return Container(
+                        height: 200,
+                        color: Colors.amber,
+                        child: Center(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[
+                              const Text('Modal BottomSheet'),
+                              ElevatedButton(
+                                child: const Text('Close BottomSheet'),
+                                onPressed: () => Navigator.pop(context),
+                              )
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                  );
+                },
+              ),
               const SizedBox(
                 height: 20,
               ),
@@ -222,13 +248,11 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.grey.withOpacity(0.5),
                             spreadRadius: 1,
                             blurRadius: 7,
-                            offset: Offset(0, 3), // changes position of shadow
+                            offset: const Offset(
+                                0, 3), // changes position of shadow
                           ),
                         ],
-                        color: Color(0xffFFFFFF),
-                        border: Border.all(
-                          color: Color(0xff9151ED),
-                        ),
+                        color: const Color(0xffFFFFFF),
                         borderRadius: BorderRadius.circular(
                           18,
                         ),
@@ -264,13 +288,11 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.grey.withOpacity(0.5),
                             spreadRadius: 1,
                             blurRadius: 7,
-                            offset: Offset(0, 3), // changes position of shadow
+                            offset: const Offset(
+                                0, 3), // changes position of shadow
                           ),
                         ],
-                        color: Color(0xffFFFFFF),
-                        border: Border.all(
-                          color: Color(0xff9151ED),
-                        ),
+                        color: const Color(0xffFFFFFF),
                         borderRadius: BorderRadius.circular(
                           18,
                         ),
@@ -304,13 +326,11 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.grey.withOpacity(0.5),
                             spreadRadius: 1,
                             blurRadius: 7,
-                            offset: Offset(0, 3), // changes position of shadow
+                            offset: const Offset(
+                                0, 3), // changes position of shadow
                           ),
                         ],
-                        color: Color(0xffFFFFFF),
-                        border: Border.all(
-                          color: Color(0xff9151ED),
-                        ),
+                        color: const Color(0xffFFFFFF),
                         borderRadius: BorderRadius.circular(
                           18,
                         ),
@@ -347,10 +367,33 @@ class _HomePageState extends State<HomePage> {
                     fontSize: 16,
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business),
+            label: 'Business',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            label: 'School',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            label: 'School',
+          ),
+        ],
+        // currentIndex: _selectedIndex,
+        // selectedItemColor: Colors.amber[800],
+        // onTap: _onItemTapped,
       ),
     );
   }
