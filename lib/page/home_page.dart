@@ -1,399 +1,497 @@
-import 'package:flutter/material.dart';
-import 'package:projek_kpam_lifehealth/theme.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
+import 'package:flutter/material.dart';
+import 'package:projek_kpam_lifehealth/page/login_page.dart';
+import 'package:projek_kpam_lifehealth/theme.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  static final List<String> imgSlider = [
-    'banner.png',
-    'Baner1.png',
-    'Baner2.png',
+  int _current = 0;
+  final CarouselController _controller = CarouselController();
+  final List<String> imgList = [
+    'https://live.staticflickr.com/65535/51770528611_35195ac56b_c.jpg',
+    'http://dinkes.kukarkab.go.id/foto_berita/14cover%20booster.jpg',
+    'http://karyamakmur.bangka.go.id/sites/default/files/images/berita/285c1df0db48979a3a2a37e6b8c15101.jpg',
   ];
-  final CarouselSlider autoPlayImage = CarouselSlider(
-    items: imgSlider.map((fileImage) {
-      return Container(
-        margin: const EdgeInsets.all(5.0),
-        child: ClipRRect(
-          borderRadius: const BorderRadius.all(Radius.circular(10)),
-          child: Image.asset(
-            'assets/images/${fileImage}',
-            width: 10000,
-            fit: BoxFit.cover,
-          ),
-        ),
-      );
-    }).toList(),
-    options: CarouselOptions(
-      height: 163,
-      autoPlay: true,
-      enlargeCenterPage: true,
-      aspectRatio: 2.0,
-    ),
-  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Color(0xffE5E5E5),
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              const SizedBox(
-                height: 25,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Image.asset(
-                    "assets/images/foto.png",
-                    width: 40,
-                  ),
-                  Image.asset(
-                    "assets/images/icon_notif.png",
-                    width: 25,
-                  ),
-                ],
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Center(
-                child: Column(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                const SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    autoPlayImage,
+                    Container(
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10.0),
+                            child: Image.asset(
+                              "assets/images/pic.png",
+                              width: 35,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 8,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Halo, Selamat Datang",
+                                style: subRegular.copyWith(fontSize: 10),
+                              ),
+                              Text(
+                                "Abdul Aziz Permana",
+                                style: subRegular.copyWith(fontSize: 14),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 10.0),
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Icon(
+                          Icons.notifications_none_outlined,
+                          color: primaryColor,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              Text(
-                "Layanan Kami",
-                style: blackReguler.copyWith(
-                  fontSize: 16,
+                const SizedBox(
+                  height: 20,
                 ),
-                textAlign: TextAlign.left,
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      height: 100,
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 1,
-                            blurRadius: 7,
-                            offset: const Offset(
-                                0, 3), // changes position of shadow
-                          ),
-                        ],
-                        color: const Color(0xffFFFFFF),
-                        borderRadius: BorderRadius.circular(
-                          18,
-                        ),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            "assets/images/icon3.png",
-                            width: 40,
-                            height: 40,
-                          ),
-                          const SizedBox(
-                            height: 14,
-                          ),
-                          Text(
-                            "Vaksinasi",
-                            style: subRegular.copyWith(
-                              fontSize: 13,
+                Column(
+                  children: [
+                    CarouselSlider(
+                      options: CarouselOptions(
+                          autoPlay: true,
+                          aspectRatio: 2.0,
+                          enlargeCenterPage: true,
+                          autoPlayAnimationDuration:
+                              const Duration(milliseconds: 800),
+                          onPageChanged: (index, caruselReason) {
+                            setState(() {
+                              _current = index;
+                            });
+                          }),
+                      items: imgList
+                          .map(
+                            (item) => Container(
+                              child: Container(
+                                margin: const EdgeInsets.all(5.0),
+                                child: ClipRRect(
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(5.0)),
+                                  child: Stack(
+                                    children: <Widget>[
+                                      Image.network(item,
+                                          fit: BoxFit.cover, width: 1000.0),
+                                      Positioned(
+                                        bottom: 0.0,
+                                        left: 0.0,
+                                        right: 0.0,
+                                        child: Container(
+                                          decoration: const BoxDecoration(
+                                            gradient: LinearGradient(
+                                              colors: [
+                                                Color.fromARGB(200, 0, 0, 0),
+                                                Color.fromARGB(0, 0, 0, 0)
+                                              ],
+                                              begin: Alignment.bottomCenter,
+                                              end: Alignment.topCenter,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
                             ),
                           )
-                        ],
-                      ),
+                          .toList(),
                     ),
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  Expanded(
-                    child: Container(
-                      height: 100,
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 1,
-                            blurRadius: 7,
-                            offset: const Offset(
-                                0, 3), // changes position of shadow
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: imgList.asMap().entries.map((entry) {
+                        return GestureDetector(
+                          onTap: () => _controller.animateToPage(entry.key),
+                          child: Container(
+                            width: 8.0,
+                            height: 8.0,
+                            margin: EdgeInsets.symmetric(
+                                vertical: 8.0, horizontal: 4.0),
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: (Theme.of(context).brightness ==
+                                            Brightness.dark
+                                        ? Colors.white
+                                        : Colors.black)
+                                    .withOpacity(
+                                        _current == entry.key ? 0.9 : 0.4)),
                           ),
-                        ],
-                        color: const Color(0xffFFFFFF),
-                        borderRadius: BorderRadius.circular(
-                          18,
-                        ),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            "assets/images/icon4.png",
-                          ),
-                          const SizedBox(
-                            height: 14,
-                          ),
-                          Text(
-                            "Konsultasi",
-                            style: subRegular.copyWith(
-                              fontSize: 13,
-                            ),
-                          )
-                        ],
-                      ),
+                        );
+                      }).toList(),
                     ),
-                  ),
-                  const SizedBox(width: 20),
-                  Expanded(
-                    child: Container(
-                      height: 100,
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 1,
-                            blurRadius: 7,
-                            offset: const Offset(
-                                0, 3), // changes position of shadow
-                          ),
-                        ],
-                        color: const Color(0xffFFFFFF),
-                        borderRadius: BorderRadius.circular(
-                          18,
-                        ),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            "assets/images/icon5.png",
-                          ),
-                          const SizedBox(
-                            height: 14,
-                          ),
-                          Text(
-                            "Donor Darah",
-                            style: subRegular.copyWith(
-                              fontSize: 13,
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              ElevatedButton(
-                child: const Text('showModalBottomSheet'),
-                onPressed: () {
-                  showModalBottomSheet<void>(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return Container(
-                        height: 200,
-                        color: Colors.amber,
-                        child: Center(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              const Text('Modal BottomSheet'),
-                              ElevatedButton(
-                                child: const Text('Close BottomSheet'),
-                                onPressed: () => Navigator.pop(context),
-                              )
-                            ],
-                          ),
-                        ),
-                      );
-                    },
-                  );
-                },
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      height: 100,
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 1,
-                            blurRadius: 7,
-                            offset: const Offset(
-                                0, 3), // changes position of shadow
-                          ),
-                        ],
-                        color: const Color(0xffFFFFFF),
-                        borderRadius: BorderRadius.circular(
-                          18,
-                        ),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            "assets/images/icon6.png",
-                          ),
-                          const SizedBox(
-                            height: 14,
-                          ),
-                          Text(
-                            "Antrean Klinik",
-                            style: subRegular.copyWith(
-                              fontSize: 13,
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  Expanded(
-                    child: Container(
-                      height: 100,
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 1,
-                            blurRadius: 7,
-                            offset: const Offset(
-                                0, 3), // changes position of shadow
-                          ),
-                        ],
-                        color: const Color(0xffFFFFFF),
-                        borderRadius: BorderRadius.circular(
-                          18,
-                        ),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            "assets/images/icon7.png",
-                          ),
-                          const SizedBox(
-                            height: 14,
-                          ),
-                          Text(
-                            "Rumah Sakit",
-                            style: subRegular.copyWith(
-                              fontSize: 13,
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 20),
-                  Expanded(
-                    child: Container(
-                      height: 100,
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 1,
-                            blurRadius: 7,
-                            offset: const Offset(
-                                0, 3), // changes position of shadow
-                          ),
-                        ],
-                        color: const Color(0xffFFFFFF),
-                        borderRadius: BorderRadius.circular(
-                          18,
-                        ),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            "assets/images/icon8.png",
-                          ),
-                          const SizedBox(
-                            height: 8,
-                          ),
-                          Text(
-                            "Lainnya",
-                            style: subRegular.copyWith(
-                              fontSize: 13,
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  "Artikel Seputar Kesehatan",
-                  style: blackReguler.copyWith(
-                    fontSize: 16,
-                  ),
+                  ],
                 ),
-              ),
-            ],
+                Wrap(
+                  spacing: 10,
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const LoginPage(),
+                          ),
+                        );
+                      },
+                      child: Image.asset(
+                        "assets/images/ic_1.png",
+                        height: 100,
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const LoginPage(),
+                          ),
+                        );
+                      },
+                      child: Image.asset(
+                        "assets/images/ic_2.png",
+                        height: 100,
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const LoginPage(),
+                          ),
+                        );
+                      },
+                      child: Image.asset(
+                        "assets/images/ic_3.png",
+                        height: 100,
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const LoginPage(),
+                          ),
+                        );
+                      },
+                      child: Image.asset(
+                        "assets/images/ic_4.png",
+                        height: 100,
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const LoginPage(),
+                          ),
+                        );
+                      },
+                      child: Image.asset(
+                        "assets/images/ic_5.png",
+                        height: 100,
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const LoginPage(),
+                          ),
+                        );
+                      },
+                      child: Image.asset(
+                        "assets/images/ic_6.png",
+                        height: 100,
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const LoginPage(),
+                          ),
+                        );
+                      },
+                      child: Image.asset(
+                        "assets/images/ic_7.png",
+                        height: 100,
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const LoginPage(),
+                          ),
+                        );
+                      },
+                      child: Image.asset(
+                        "assets/images/ic_8.png",
+                        height: 100,
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        showModalBottomSheet(
+                          // enableDrag: true,
+                          isScrollControlled: true,
+                          context: context,
+                          builder: (context) {
+                            return SingleChildScrollView(
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                  vertical: 10,
+                                ),
+                                color: whiteColor,
+                                child: Column(
+                                  children: [
+                                    Image.asset('assets/images/banner.png'),
+                                    const SizedBox(
+                                      height: 12,
+                                    ),
+                                    SingleChildScrollView(
+                                      child: Wrap(
+                                        spacing: 25,
+                                        children: [
+                                          InkWell(
+                                            onTap: () {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const LoginPage(),
+                                                ),
+                                              );
+                                            },
+                                            child: Image.asset(
+                                              "assets/images/ic_1.png",
+                                              height: 100,
+                                            ),
+                                          ),
+                                          InkWell(
+                                            onTap: () {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const LoginPage(),
+                                                ),
+                                              );
+                                            },
+                                            child: Image.asset(
+                                              "assets/images/ic_2.png",
+                                              height: 100,
+                                            ),
+                                          ),
+                                          InkWell(
+                                            onTap: () {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const LoginPage(),
+                                                ),
+                                              );
+                                            },
+                                            child: Image.asset(
+                                              "assets/images/ic_3.png",
+                                              height: 100,
+                                            ),
+                                          ),
+                                          InkWell(
+                                            onTap: () {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const LoginPage(),
+                                                ),
+                                              );
+                                            },
+                                            child: Image.asset(
+                                              "assets/images/ic_4.png",
+                                              height: 100,
+                                            ),
+                                          ),
+                                          InkWell(
+                                            onTap: () {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const LoginPage(),
+                                                ),
+                                              );
+                                            },
+                                            child: Image.asset(
+                                              "assets/images/ic_5.png",
+                                              height: 100,
+                                            ),
+                                          ),
+                                          InkWell(
+                                            onTap: () {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const LoginPage(),
+                                                ),
+                                              );
+                                            },
+                                            child: Image.asset(
+                                              "assets/images/ic_6.png",
+                                              height: 100,
+                                            ),
+                                          ),
+                                          InkWell(
+                                            onTap: () {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const LoginPage(),
+                                                ),
+                                              );
+                                            },
+                                            child: Image.asset(
+                                              "assets/images/ic_7.png",
+                                              height: 100,
+                                            ),
+                                          ),
+                                          InkWell(
+                                            onTap: () {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const LoginPage(),
+                                                ),
+                                              );
+                                            },
+                                            child: Image.asset(
+                                              "assets/images/ic_8.png",
+                                              height: 100,
+                                            ),
+                                          ),
+                                          InkWell(
+                                            onTap: () {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const LoginPage(),
+                                                ),
+                                              );
+                                            },
+                                            child: Image.asset(
+                                              "assets/images/ic_8.png",
+                                              height: 100,
+                                            ),
+                                          ),
+                                          InkWell(
+                                            onTap: () {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const LoginPage(),
+                                                ),
+                                              );
+                                            },
+                                            child: Image.asset(
+                                              "assets/images/ic_8.png",
+                                              height: 100,
+                                            ),
+                                          ),
+                                          InkWell(
+                                            onTap: () {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const LoginPage(),
+                                                ),
+                                              );
+                                            },
+                                            child: Image.asset(
+                                              "assets/images/ic_8.png",
+                                              height: 100,
+                                            ),
+                                          ),
+                                          InkWell(
+                                            onTap: () {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      const LoginPage(),
+                                                ),
+                                              );
+                                            },
+                                            child: Image.asset(
+                                              "assets/images/ic_8.png",
+                                              height: 100,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            );
+                          },
+                        );
+                      },
+                      child: Image.asset(
+                        "assets/images/ic_more.png",
+                        height: 100,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
-          ),
-        ],
-        // currentIndex: _selectedIndex,
-        // selectedItemColor: Colors.amber[800],
-        // onTap: _onItemTapped,
       ),
     );
   }
