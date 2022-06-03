@@ -12,6 +12,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _current = 0;
+  int _selectedIndex = 0;
   final CarouselController _controller = CarouselController();
   final List<String> imgList = [
     'https://live.staticflickr.com/65535/51770528611_35195ac56b_c.jpg',
@@ -19,13 +20,26 @@ class _HomePageState extends State<HomePage> {
     'http://karyamakmur.bangka.go.id/sites/default/files/images/berita/285c1df0db48979a3a2a37e6b8c15101.jpg',
   ];
 
+  static const List<Widget> _widgetOptions = <Widget>[
+    LoginPage(),
+    LoginPage(),
+    LoginPage(),
+    LoginPage(),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(20),
             child: Column(
               children: [
                 const SizedBox(
@@ -137,7 +151,7 @@ class _HomePageState extends State<HomePage> {
                           child: Container(
                             width: 8.0,
                             height: 8.0,
-                            margin: EdgeInsets.symmetric(
+                            margin: const EdgeInsets.symmetric(
                                 vertical: 8.0, horizontal: 4.0),
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
@@ -153,8 +167,19 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  'Layanan Kami',
+                  style: subHeading.copyWith(fontSize: 16),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
                 Wrap(
-                  spacing: 10,
+                  spacing: 20,
+                  runSpacing: 20,
                   children: [
                     InkWell(
                       onTap: () {
@@ -165,9 +190,39 @@ class _HomePageState extends State<HomePage> {
                           ),
                         );
                       },
-                      child: Image.asset(
-                        "assets/images/ic_1.png",
-                        height: 100,
+                      child: Container(
+                        padding: const EdgeInsets.all(8),
+                        height: 75,
+                        width: 75,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 1,
+                              blurRadius: 9,
+                              offset: const Offset(
+                                  1, 3), // changes position of shadow
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              "assets/images/ic_1.png",
+                              height: 30,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Text('Vaksinasi',
+                                style: subRegular.copyWith(
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w700,
+                                ))
+                          ],
+                        ),
                       ),
                     ),
                     InkWell(
@@ -179,9 +234,39 @@ class _HomePageState extends State<HomePage> {
                           ),
                         );
                       },
-                      child: Image.asset(
-                        "assets/images/ic_2.png",
-                        height: 100,
+                      child: Container(
+                        padding: const EdgeInsets.all(8),
+                        height: 75,
+                        width: 75,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 1,
+                              blurRadius: 9,
+                              offset: const Offset(
+                                  1, 3), // changes position of shadow
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              "assets/images/ic2.png",
+                              height: 30,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Text('Obat',
+                                style: subRegular.copyWith(
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w700,
+                                ))
+                          ],
+                        ),
                       ),
                     ),
                     InkWell(
@@ -193,9 +278,39 @@ class _HomePageState extends State<HomePage> {
                           ),
                         );
                       },
-                      child: Image.asset(
-                        "assets/images/ic_3.png",
-                        height: 100,
+                      child: Container(
+                        padding: const EdgeInsets.all(8),
+                        height: 75,
+                        width: 75,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 1,
+                              blurRadius: 9,
+                              offset: const Offset(
+                                  1, 3), // changes position of shadow
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              "assets/images/ic3.png",
+                              height: 30,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Text('Konsultasi',
+                                style: subRegular.copyWith(
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w700,
+                                ))
+                          ],
+                        ),
                       ),
                     ),
                     InkWell(
@@ -207,9 +322,39 @@ class _HomePageState extends State<HomePage> {
                           ),
                         );
                       },
-                      child: Image.asset(
-                        "assets/images/ic_4.png",
-                        height: 100,
+                      child: Container(
+                        padding: const EdgeInsets.all(8),
+                        height: 75,
+                        width: 75,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 1,
+                              blurRadius: 9,
+                              offset: const Offset(
+                                  1, 3), // changes position of shadow
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              "assets/images/ic4.png",
+                              height: 30,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Text('Ambulan',
+                                style: subRegular.copyWith(
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w700,
+                                ))
+                          ],
+                        ),
                       ),
                     ),
                     InkWell(
@@ -221,9 +366,41 @@ class _HomePageState extends State<HomePage> {
                           ),
                         );
                       },
-                      child: Image.asset(
-                        "assets/images/ic_5.png",
-                        height: 100,
+                      child: Container(
+                        padding: const EdgeInsets.all(8),
+                        height: 75,
+                        width: 75,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 1,
+                              blurRadius: 9,
+                              offset: const Offset(
+                                  1, 3), // changes position of shadow
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              "assets/images/ic5.png",
+                              height: 30,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              'Lokasi RS',
+                              style: subRegular.copyWith(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                     InkWell(
@@ -235,9 +412,39 @@ class _HomePageState extends State<HomePage> {
                           ),
                         );
                       },
-                      child: Image.asset(
-                        "assets/images/ic_6.png",
-                        height: 100,
+                      child: Container(
+                        padding: const EdgeInsets.all(8),
+                        height: 75,
+                        width: 75,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 1,
+                              blurRadius: 9,
+                              offset: const Offset(
+                                  1, 3), // changes position of shadow
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              "assets/images/ic6.png",
+                              height: 30,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Text('DokterKu',
+                                style: subRegular.copyWith(
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w700,
+                                ))
+                          ],
+                        ),
                       ),
                     ),
                     InkWell(
@@ -249,23 +456,39 @@ class _HomePageState extends State<HomePage> {
                           ),
                         );
                       },
-                      child: Image.asset(
-                        "assets/images/ic_7.png",
-                        height: 100,
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const LoginPage(),
-                          ),
-                        );
-                      },
-                      child: Image.asset(
-                        "assets/images/ic_8.png",
-                        height: 100,
+                      child: Container(
+                        padding: const EdgeInsets.all(8),
+                        height: 75,
+                        width: 75,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 1,
+                              blurRadius: 9,
+                              offset: const Offset(
+                                  1, 3), // changes position of shadow
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              "assets/images/ic7.png",
+                              height: 30,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Text('Inapanku',
+                                style: subRegular.copyWith(
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w700,
+                                ))
+                          ],
+                        ),
                       ),
                     ),
                     InkWell(
@@ -283,196 +506,647 @@ class _HomePageState extends State<HomePage> {
                                 color: whiteColor,
                                 child: Column(
                                   children: [
+                                    Image.asset(
+                                      'assets/images/line_sheet.png',
+                                      height: 4,
+                                    ),
+                                    const SizedBox(
+                                      height: 6,
+                                    ),
                                     Image.asset('assets/images/banner.png'),
                                     const SizedBox(
                                       height: 12,
                                     ),
-                                    SingleChildScrollView(
-                                      child: Wrap(
-                                        spacing: 25,
-                                        children: [
-                                          InkWell(
-                                            onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const LoginPage(),
+                                    Wrap(
+                                      spacing: 25,
+                                      runSpacing: 25,
+                                      children: [
+                                        InkWell(
+                                          onTap: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const LoginPage(),
+                                              ),
+                                            );
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.all(8),
+                                            height: 75,
+                                            width: 75,
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              color: Colors.white,
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: Colors.grey
+                                                      .withOpacity(0.5),
+                                                  spreadRadius: 1,
+                                                  blurRadius: 9,
+                                                  offset: const Offset(1,
+                                                      3), // changes position of shadow
                                                 ),
-                                              );
-                                            },
-                                            child: Image.asset(
-                                              "assets/images/ic_1.png",
-                                              height: 100,
+                                              ],
+                                            ),
+                                            child: Column(
+                                              children: [
+                                                Image.asset(
+                                                  "assets/images/ic_1.png",
+                                                  height: 30,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                Text('Vaksinasi',
+                                                    style: subRegular.copyWith(
+                                                      fontSize: 10,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                    ))
+                                              ],
                                             ),
                                           ),
-                                          InkWell(
-                                            onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const LoginPage(),
+                                        ),
+                                        InkWell(
+                                          onTap: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const LoginPage(),
+                                              ),
+                                            );
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.all(8),
+                                            height: 75,
+                                            width: 75,
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              color: Colors.white,
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: Colors.grey
+                                                      .withOpacity(0.5),
+                                                  spreadRadius: 1,
+                                                  blurRadius: 9,
+                                                  offset: const Offset(1,
+                                                      3), // changes position of shadow
                                                 ),
-                                              );
-                                            },
-                                            child: Image.asset(
-                                              "assets/images/ic_2.png",
-                                              height: 100,
+                                              ],
+                                            ),
+                                            child: Column(
+                                              children: [
+                                                Image.asset(
+                                                  "assets/images/ic2.png",
+                                                  height: 30,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                Text('Obat',
+                                                    style: subRegular.copyWith(
+                                                      fontSize: 10,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                    ))
+                                              ],
                                             ),
                                           ),
-                                          InkWell(
-                                            onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const LoginPage(),
+                                        ),
+                                        InkWell(
+                                          onTap: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const LoginPage(),
+                                              ),
+                                            );
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.all(8),
+                                            height: 75,
+                                            width: 75,
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              color: Colors.white,
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: Colors.grey
+                                                      .withOpacity(0.5),
+                                                  spreadRadius: 1,
+                                                  blurRadius: 9,
+                                                  offset: const Offset(1,
+                                                      3), // changes position of shadow
                                                 ),
-                                              );
-                                            },
-                                            child: Image.asset(
-                                              "assets/images/ic_3.png",
-                                              height: 100,
+                                              ],
+                                            ),
+                                            child: Column(
+                                              children: [
+                                                Image.asset(
+                                                  "assets/images/ic3.png",
+                                                  height: 30,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                Text('Konsultasi',
+                                                    style: subRegular.copyWith(
+                                                      fontSize: 10,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                    ))
+                                              ],
                                             ),
                                           ),
-                                          InkWell(
-                                            onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const LoginPage(),
+                                        ),
+                                        InkWell(
+                                          onTap: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const LoginPage(),
+                                              ),
+                                            );
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.all(8),
+                                            height: 75,
+                                            width: 75,
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              color: Colors.white,
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: Colors.grey
+                                                      .withOpacity(0.5),
+                                                  spreadRadius: 1,
+                                                  blurRadius: 9,
+                                                  offset: const Offset(1,
+                                                      3), // changes position of shadow
                                                 ),
-                                              );
-                                            },
-                                            child: Image.asset(
-                                              "assets/images/ic_4.png",
-                                              height: 100,
+                                              ],
+                                            ),
+                                            child: Column(
+                                              children: [
+                                                Image.asset(
+                                                  "assets/images/ic4.png",
+                                                  height: 30,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                Text('Ambulan',
+                                                    style: subRegular.copyWith(
+                                                      fontSize: 10,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                    ))
+                                              ],
                                             ),
                                           ),
-                                          InkWell(
-                                            onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const LoginPage(),
+                                        ),
+                                        InkWell(
+                                          onTap: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const LoginPage(),
+                                              ),
+                                            );
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.all(8),
+                                            height: 75,
+                                            width: 75,
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              color: Colors.white,
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: Colors.grey
+                                                      .withOpacity(0.5),
+                                                  spreadRadius: 1,
+                                                  blurRadius: 9,
+                                                  offset: const Offset(1,
+                                                      3), // changes position of shadow
                                                 ),
-                                              );
-                                            },
-                                            child: Image.asset(
-                                              "assets/images/ic_5.png",
-                                              height: 100,
+                                              ],
+                                            ),
+                                            child: Column(
+                                              children: [
+                                                Image.asset(
+                                                  "assets/images/ic5.png",
+                                                  height: 30,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                Text(
+                                                  'Lokasi RS',
+                                                  style: subRegular.copyWith(
+                                                    fontSize: 10,
+                                                    fontWeight: FontWeight.w700,
+                                                  ),
+                                                )
+                                              ],
                                             ),
                                           ),
-                                          InkWell(
-                                            onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const LoginPage(),
+                                        ),
+                                        InkWell(
+                                          onTap: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const LoginPage(),
+                                              ),
+                                            );
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.all(8),
+                                            height: 75,
+                                            width: 75,
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              color: Colors.white,
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: Colors.grey
+                                                      .withOpacity(0.5),
+                                                  spreadRadius: 1,
+                                                  blurRadius: 9,
+                                                  offset: const Offset(1,
+                                                      3), // changes position of shadow
                                                 ),
-                                              );
-                                            },
-                                            child: Image.asset(
-                                              "assets/images/ic_6.png",
-                                              height: 100,
+                                              ],
+                                            ),
+                                            child: Column(
+                                              children: [
+                                                Image.asset(
+                                                  "assets/images/ic6.png",
+                                                  height: 30,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                Text('DokterKu',
+                                                    style: subRegular.copyWith(
+                                                      fontSize: 10,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                    ))
+                                              ],
                                             ),
                                           ),
-                                          InkWell(
-                                            onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const LoginPage(),
+                                        ),
+                                        InkWell(
+                                          onTap: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const LoginPage(),
+                                              ),
+                                            );
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.all(8),
+                                            height: 75,
+                                            width: 75,
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              color: Colors.white,
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: Colors.grey
+                                                      .withOpacity(0.5),
+                                                  spreadRadius: 1,
+                                                  blurRadius: 9,
+                                                  offset: const Offset(1,
+                                                      3), // changes position of shadow
                                                 ),
-                                              );
-                                            },
-                                            child: Image.asset(
-                                              "assets/images/ic_7.png",
-                                              height: 100,
+                                              ],
+                                            ),
+                                            child: Column(
+                                              children: [
+                                                Image.asset(
+                                                  "assets/images/ic7.png",
+                                                  height: 30,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                Text('InapanKu',
+                                                    style: subRegular.copyWith(
+                                                      fontSize: 10,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                    ))
+                                              ],
                                             ),
                                           ),
-                                          InkWell(
-                                            onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const LoginPage(),
+                                        ),
+                                        InkWell(
+                                          onTap: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const LoginPage(),
+                                              ),
+                                            );
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.all(8),
+                                            height: 75,
+                                            width: 75,
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              color: Colors.white,
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: Colors.grey
+                                                      .withOpacity(0.5),
+                                                  spreadRadius: 1,
+                                                  blurRadius: 9,
+                                                  offset: const Offset(1,
+                                                      3), // changes position of shadow
                                                 ),
-                                              );
-                                            },
-                                            child: Image.asset(
-                                              "assets/images/ic_8.png",
-                                              height: 100,
+                                              ],
+                                            ),
+                                            child: Column(
+                                              children: [
+                                                Image.asset(
+                                                  "assets/images/ic8.png",
+                                                  height: 30,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                Text('ImunKu',
+                                                    style: subRegular.copyWith(
+                                                      fontSize: 10,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                    ))
+                                              ],
                                             ),
                                           ),
-                                          InkWell(
-                                            onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const LoginPage(),
+                                        ),
+                                        InkWell(
+                                          onTap: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const LoginPage(),
+                                              ),
+                                            );
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.all(8),
+                                            height: 75,
+                                            width: 75,
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              color: Colors.white,
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: Colors.grey
+                                                      .withOpacity(0.5),
+                                                  spreadRadius: 1,
+                                                  blurRadius: 9,
+                                                  offset: const Offset(1,
+                                                      3), // changes position of shadow
                                                 ),
-                                              );
-                                            },
-                                            child: Image.asset(
-                                              "assets/images/ic_8.png",
-                                              height: 100,
+                                              ],
+                                            ),
+                                            child: Column(
+                                              children: [
+                                                Image.asset(
+                                                  "assets/images/ic9.png",
+                                                  height: 30,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                Text('RontgenKu',
+                                                    style: subRegular.copyWith(
+                                                      fontSize: 10,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                    ))
+                                              ],
                                             ),
                                           ),
-                                          InkWell(
-                                            onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const LoginPage(),
+                                        ),
+                                        InkWell(
+                                          onTap: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const LoginPage(),
+                                              ),
+                                            );
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.all(8),
+                                            height: 75,
+                                            width: 75,
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              color: Colors.white,
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: Colors.grey
+                                                      .withOpacity(0.5),
+                                                  spreadRadius: 1,
+                                                  blurRadius: 9,
+                                                  offset: const Offset(1,
+                                                      3), // changes position of shadow
                                                 ),
-                                              );
-                                            },
-                                            child: Image.asset(
-                                              "assets/images/ic_8.png",
-                                              height: 100,
+                                              ],
+                                            ),
+                                            child: Column(
+                                              children: [
+                                                Image.asset(
+                                                  "assets/images/ic10.png",
+                                                  height: 30,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                Text('ResepKu',
+                                                    style: subRegular.copyWith(
+                                                      fontSize: 10,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                    ))
+                                              ],
                                             ),
                                           ),
-                                          InkWell(
-                                            onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const LoginPage(),
+                                        ),
+                                        InkWell(
+                                          onTap: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const LoginPage(),
+                                              ),
+                                            );
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.all(8),
+                                            height: 75,
+                                            width: 75,
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              color: Colors.white,
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: Colors.grey
+                                                      .withOpacity(0.5),
+                                                  spreadRadius: 1,
+                                                  blurRadius: 9,
+                                                  offset: const Offset(1,
+                                                      3), // changes position of shadow
                                                 ),
-                                              );
-                                            },
-                                            child: Image.asset(
-                                              "assets/images/ic_8.png",
-                                              height: 100,
+                                              ],
+                                            ),
+                                            child: Column(
+                                              children: [
+                                                Image.asset(
+                                                  "assets/images/ic11.png",
+                                                  height: 30,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                Text('Kontrol',
+                                                    style: subRegular.copyWith(
+                                                      fontSize: 10,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                    ))
+                                              ],
                                             ),
                                           ),
-                                          InkWell(
-                                            onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      const LoginPage(),
+                                        ),
+                                        InkWell(
+                                          onTap: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const LoginPage(),
+                                              ),
+                                            );
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.all(8),
+                                            height: 75,
+                                            width: 75,
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              color: Colors.white,
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: Colors.grey
+                                                      .withOpacity(0.5),
+                                                  spreadRadius: 1,
+                                                  blurRadius: 9,
+                                                  offset: const Offset(1,
+                                                      3), // changes position of shadow
                                                 ),
-                                              );
-                                            },
-                                            child: Image.asset(
-                                              "assets/images/ic_8.png",
-                                              height: 100,
+                                              ],
+                                            ),
+                                            child: Column(
+                                              children: [
+                                                Image.asset(
+                                                  "assets/images/ic12.png",
+                                                  height: 30,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                Text('RamuanKu',
+                                                    style: subRegular.copyWith(
+                                                      fontSize: 10,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                    ))
+                                              ],
                                             ),
                                           ),
-                                        ],
-                                      ),
+                                        ),
+                                        InkWell(
+                                          onTap: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const LoginPage(),
+                                              ),
+                                            );
+                                          },
+                                          child: Container(
+                                            padding: const EdgeInsets.all(8),
+                                            height: 75,
+                                            width: 75,
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              color: Colors.white,
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: Colors.grey
+                                                      .withOpacity(0.5),
+                                                  spreadRadius: 1,
+                                                  blurRadius: 9,
+                                                  offset: const Offset(1,
+                                                      3), // changes position of shadow
+                                                ),
+                                              ],
+                                            ),
+                                            child: Column(
+                                              children: [
+                                                Image.asset(
+                                                  "assets/images/ic13.png",
+                                                  height: 30,
+                                                ),
+                                                const SizedBox(
+                                                  height: 10,
+                                                ),
+                                                Text('DietKu',
+                                                    style: subRegular.copyWith(
+                                                      fontSize: 10,
+                                                      fontWeight:
+                                                          FontWeight.w700,
+                                                    ))
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ],
                                 ),
@@ -481,17 +1155,396 @@ class _HomePageState extends State<HomePage> {
                           },
                         );
                       },
-                      child: Image.asset(
-                        "assets/images/ic_more.png",
-                        height: 100,
+                      child: Container(
+                        padding: const EdgeInsets.all(8),
+                        height: 75,
+                        width: 75,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 1,
+                              blurRadius: 9,
+                              offset: const Offset(
+                                  1, 3), // changes position of shadow
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              "assets/images/more.png",
+                              height: 30,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              'Lainnya',
+                              style: subRegular.copyWith(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Column(
+                  children: [
+                    Text(
+                      'Artikel Kesehatan',
+                      style: subHeading.copyWith(fontSize: 16),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  height: 70,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 1,
+                        blurRadius: 9,
+                        offset:
+                            const Offset(1, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        "assets/images/news.jpeg",
+                        height: 50,
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Tips Sehat Selama Pandemi',
+                            style: subHeading.copyWith(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          Text(
+                            'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: subHeading.copyWith(
+                              fontSize: 10,
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  height: 70,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 1,
+                        blurRadius: 9,
+                        offset:
+                            const Offset(1, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        "assets/images/news.jpeg",
+                        height: 50,
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Tips Sehat Selama Pandemi',
+                            style: subHeading.copyWith(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          Text(
+                            'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: subHeading.copyWith(
+                              fontSize: 10,
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  height: 70,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 1,
+                        blurRadius: 9,
+                        offset:
+                            const Offset(1, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        "assets/images/news.jpeg",
+                        height: 50,
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Tips Sehat Selama Pandemi',
+                            style: subHeading.copyWith(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          Text(
+                            'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: subHeading.copyWith(
+                              fontSize: 10,
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  height: 70,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 1,
+                        blurRadius: 9,
+                        offset:
+                            const Offset(1, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        "assets/images/news.jpeg",
+                        height: 50,
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Tips Sehat Selama Pandemi',
+                            style: subHeading.copyWith(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          Text(
+                            'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: subHeading.copyWith(
+                              fontSize: 10,
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  height: 70,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 1,
+                        blurRadius: 9,
+                        offset:
+                            const Offset(1, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        "assets/images/news.jpeg",
+                        height: 50,
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Tips Sehat Selama Pandemi',
+                            style: subHeading.copyWith(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          Text(
+                            'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: subHeading.copyWith(
+                              fontSize: 10,
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  height: 70,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 1,
+                        blurRadius: 9,
+                        offset:
+                            const Offset(1, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        "assets/images/news.jpeg",
+                        height: 50,
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Tips Sehat Selama Pandemi',
+                            style: subHeading.copyWith(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          Text(
+                            'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: subHeading.copyWith(
+                              fontSize: 10,
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ],
             ),
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        unselectedItemColor: Colors.grey,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.task),
+            label: 'Business',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.feed),
+            label: 'School',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'School',
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: primaryColor,
+        onTap: _onItemTapped,
       ),
     );
   }
