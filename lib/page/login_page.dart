@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projek_kpam_lifehealth/page/first_home_nav.dart';
 import 'package:projek_kpam_lifehealth/page/home_page.dart';
 import 'package:projek_kpam_lifehealth/page/register_page.dart';
 import 'package:projek_kpam_lifehealth/theme.dart';
@@ -94,7 +95,7 @@ class _LoginPageState extends State<LoginPage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const HomePage(),
+                                builder: (context) => const FirstHomePage(),
                               ),
                             );
                           },

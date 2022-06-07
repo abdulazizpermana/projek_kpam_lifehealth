@@ -20,19 +20,6 @@ class _HomePageState extends State<HomePage> {
     'http://karyamakmur.bangka.go.id/sites/default/files/images/berita/285c1df0db48979a3a2a37e6b8c15101.jpg',
   ];
 
-  static const List<Widget> _widgetOptions = <Widget>[
-    LoginPage(),
-    LoginPage(),
-    LoginPage(),
-    LoginPage(),
-  ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,7 +57,8 @@ class _HomePageState extends State<HomePage> {
                               ),
                               Text(
                                 "Abdul Aziz Permana",
-                                style: subRegular.copyWith(fontSize: 14),
+                                style: subRegular.copyWith(
+                                    fontSize: 14, fontWeight: FontWeight.w700),
                               ),
                             ],
                           )
@@ -182,14 +170,7 @@ class _HomePageState extends State<HomePage> {
                   runSpacing: 20,
                   children: [
                     InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const LoginPage(),
-                          ),
-                        );
-                      },
+                      onTap: () {},
                       child: Container(
                         padding: const EdgeInsets.all(8),
                         height: 75,
@@ -226,14 +207,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const LoginPage(),
-                          ),
-                        );
-                      },
+                      onTap: () {},
                       child: Container(
                         padding: const EdgeInsets.all(8),
                         height: 75,
@@ -270,14 +244,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const LoginPage(),
-                          ),
-                        );
-                      },
+                      onTap: () {},
                       child: Container(
                         padding: const EdgeInsets.all(8),
                         height: 75,
@@ -314,14 +281,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const LoginPage(),
-                          ),
-                        );
-                      },
+                      onTap: () {},
                       child: Container(
                         padding: const EdgeInsets.all(8),
                         height: 75,
@@ -358,14 +318,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const LoginPage(),
-                          ),
-                        );
-                      },
+                      onTap: () {},
                       child: Container(
                         padding: const EdgeInsets.all(8),
                         height: 75,
@@ -404,14 +357,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const LoginPage(),
-                          ),
-                        );
-                      },
+                      onTap: () {},
                       child: Container(
                         padding: const EdgeInsets.all(8),
                         height: 75,
@@ -448,14 +394,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const LoginPage(),
-                          ),
-                        );
-                      },
+                      onTap: () {},
                       child: Container(
                         padding: const EdgeInsets.all(8),
                         height: 75,
@@ -522,15 +461,7 @@ class _HomePageState extends State<HomePage> {
                                       runSpacing: 25,
                                       children: [
                                         InkWell(
-                                          onTap: () {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const LoginPage(),
-                                              ),
-                                            );
-                                          },
+                                          onTap: () {},
                                           child: Container(
                                             padding: const EdgeInsets.all(8),
                                             height: 75,
@@ -570,15 +501,7 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                         ),
                                         InkWell(
-                                          onTap: () {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const LoginPage(),
-                                              ),
-                                            );
-                                          },
+                                          onTap: () {},
                                           child: Container(
                                             padding: const EdgeInsets.all(8),
                                             height: 75,
@@ -618,15 +541,7 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                         ),
                                         InkWell(
-                                          onTap: () {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const LoginPage(),
-                                              ),
-                                            );
-                                          },
+                                          onTap: () {},
                                           child: Container(
                                             padding: const EdgeInsets.all(8),
                                             height: 75,
@@ -666,15 +581,7 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                         ),
                                         InkWell(
-                                          onTap: () {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const LoginPage(),
-                                              ),
-                                            );
-                                          },
+                                          onTap: () {},
                                           child: Container(
                                             padding: const EdgeInsets.all(8),
                                             height: 75,
@@ -714,15 +621,7 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                         ),
                                         InkWell(
-                                          onTap: () {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const LoginPage(),
-                                              ),
-                                            );
-                                          },
+                                          onTap: () {},
                                           child: Container(
                                             padding: const EdgeInsets.all(8),
                                             height: 75,
@@ -763,15 +662,7 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                         ),
                                         InkWell(
-                                          onTap: () {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const LoginPage(),
-                                              ),
-                                            );
-                                          },
+                                          onTap: () {},
                                           child: Container(
                                             padding: const EdgeInsets.all(8),
                                             height: 75,
@@ -811,15 +702,7 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                         ),
                                         InkWell(
-                                          onTap: () {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const LoginPage(),
-                                              ),
-                                            );
-                                          },
+                                          onTap: () {},
                                           child: Container(
                                             padding: const EdgeInsets.all(8),
                                             height: 75,
@@ -859,15 +742,7 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                         ),
                                         InkWell(
-                                          onTap: () {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const LoginPage(),
-                                              ),
-                                            );
-                                          },
+                                          onTap: () {},
                                           child: Container(
                                             padding: const EdgeInsets.all(8),
                                             height: 75,
@@ -907,15 +782,7 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                         ),
                                         InkWell(
-                                          onTap: () {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const LoginPage(),
-                                              ),
-                                            );
-                                          },
+                                          onTap: () {},
                                           child: Container(
                                             padding: const EdgeInsets.all(8),
                                             height: 75,
@@ -955,63 +822,7 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                         ),
                                         InkWell(
-                                          onTap: () {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const LoginPage(),
-                                              ),
-                                            );
-                                          },
-                                          child: Container(
-                                            padding: const EdgeInsets.all(8),
-                                            height: 75,
-                                            width: 75,
-                                            decoration: BoxDecoration(
-                                              borderRadius:
-                                                  BorderRadius.circular(10),
-                                              color: Colors.white,
-                                              boxShadow: [
-                                                BoxShadow(
-                                                  color: Colors.grey
-                                                      .withOpacity(0.5),
-                                                  spreadRadius: 1,
-                                                  blurRadius: 9,
-                                                  offset: const Offset(1,
-                                                      3), // changes position of shadow
-                                                ),
-                                              ],
-                                            ),
-                                            child: Column(
-                                              children: [
-                                                Image.asset(
-                                                  "assets/images/ic10.png",
-                                                  height: 30,
-                                                ),
-                                                const SizedBox(
-                                                  height: 10,
-                                                ),
-                                                Text('ResepKu',
-                                                    style: subRegular.copyWith(
-                                                      fontSize: 10,
-                                                      fontWeight:
-                                                          FontWeight.w700,
-                                                    ))
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                        InkWell(
-                                          onTap: () {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const LoginPage(),
-                                              ),
-                                            );
-                                          },
+                                          onTap: () {},
                                           child: Container(
                                             padding: const EdgeInsets.all(8),
                                             height: 75,
@@ -1051,15 +862,7 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                         ),
                                         InkWell(
-                                          onTap: () {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const LoginPage(),
-                                              ),
-                                            );
-                                          },
+                                          onTap: () {},
                                           child: Container(
                                             padding: const EdgeInsets.all(8),
                                             height: 75,
@@ -1082,13 +885,13 @@ class _HomePageState extends State<HomePage> {
                                             child: Column(
                                               children: [
                                                 Image.asset(
-                                                  "assets/images/ic12.png",
+                                                  "assets/images/ic10.png",
                                                   height: 30,
                                                 ),
                                                 const SizedBox(
                                                   height: 10,
                                                 ),
-                                                Text('RamuanKu',
+                                                Text('ResepKu',
                                                     style: subRegular.copyWith(
                                                       fontSize: 10,
                                                       fontWeight:
@@ -1099,15 +902,7 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                         ),
                                         InkWell(
-                                          onTap: () {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const LoginPage(),
-                                              ),
-                                            );
-                                          },
+                                          onTap: () {},
                                           child: Container(
                                             padding: const EdgeInsets.all(8),
                                             height: 75,
@@ -1521,30 +1316,6 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        unselectedItemColor: Colors.grey,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.task),
-            label: 'Business',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.feed),
-            label: 'School',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'School',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: primaryColor,
-        onTap: _onItemTapped,
       ),
     );
   }
