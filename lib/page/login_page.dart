@@ -4,14 +4,9 @@ import 'package:projek_kpam_lifehealth/page/home_page.dart';
 import 'package:projek_kpam_lifehealth/page/register_page.dart';
 import 'package:projek_kpam_lifehealth/theme.dart';
 
-class LoginPage extends StatefulWidget {
+class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
 
-  @override
-  _LoginPageState createState() => _LoginPageState();
-}
-
-class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

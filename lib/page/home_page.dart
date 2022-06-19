@@ -25,6 +25,8 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
+          physics:
+              BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
           child: Padding(
             padding: const EdgeInsets.all(20),
             child: Column(

@@ -5,6 +5,8 @@ import 'package:projek_kpam_lifehealth/page/profile_page.dart';
 import 'package:projek_kpam_lifehealth/page/register_page.dart';
 
 import '../theme.dart';
+import 'apply_page.dart';
+import 'catatan.dart';
 
 class FirstHomePage extends StatefulWidget {
   const FirstHomePage({Key? key}) : super(key: key);
@@ -19,8 +21,8 @@ class _FirstHomePageState extends State<FirstHomePage> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    RegisterPage(),
-    LoginPage(),
+    ApplyPage(),
+    CatatanPage(),
     ProfilePage(),
   ];
 
@@ -40,19 +42,19 @@ class _FirstHomePageState extends State<FirstHomePage> {
         unselectedItemColor: Colors.grey,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.home_outlined),
             label: 'Beranda',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.task),
-            label: 'Pendaftaran',
+            icon: Icon(Icons.history),
+            label: 'Riwayat',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.feed),
             label: 'Catatan',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(Icons.person_outline_outlined),
             label: 'Profile',
           ),
         ],
