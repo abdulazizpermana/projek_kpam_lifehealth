@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 
-class CatatanPage extends StatefulWidget {
+class CatatanPage extends StatelessWidget {
   const CatatanPage({Key? key}) : super(key: key);
 
-  @override
-  State<CatatanPage> createState() => _CatatanPageState();
-}
-
-class _CatatanPageState extends State<CatatanPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +10,7 @@ class _CatatanPageState extends State<CatatanPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(
-            child: const Text('Fitur Belum Tersedia'),
+            child: Text('Fitur Belum Tersedia'),
           ),
         ],
       ),
