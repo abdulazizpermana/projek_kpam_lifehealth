@@ -1031,25 +1031,27 @@ class _HomePageState extends State<HomePage> {
                       const SizedBox(
                         width: 10,
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Tips Sehat Selama Pandemi',
-                            style: subHeading.copyWith(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Tips Sehat Selama Pandemi',
+                              style: subHeading.copyWith(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
-                          ),
-                          Text(
-                            'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: subHeading.copyWith(
-                              fontSize: 10,
+                            Text(
+                              'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: subHeading.copyWith(
+                                fontSize: 10,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       )
                     ],
                   ),
@@ -1083,25 +1085,27 @@ class _HomePageState extends State<HomePage> {
                       const SizedBox(
                         width: 10,
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Tips Sehat Selama Pandemi',
-                            style: subHeading.copyWith(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Tips Sehat Selama Pandemi',
+                              style: subHeading.copyWith(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
-                          ),
-                          Text(
-                            'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: subHeading.copyWith(
-                              fontSize: 10,
+                            Text(
+                              'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: subHeading.copyWith(
+                                fontSize: 10,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       )
                     ],
                   ),
@@ -1135,25 +1139,27 @@ class _HomePageState extends State<HomePage> {
                       const SizedBox(
                         width: 10,
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Tips Sehat Selama Pandemi',
-                            style: subHeading.copyWith(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Tips Sehat Selama Pandemi',
+                              style: subHeading.copyWith(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
-                          ),
-                          Text(
-                            'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: subHeading.copyWith(
-                              fontSize: 10,
+                            Text(
+                              'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: subHeading.copyWith(
+                                fontSize: 10,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       )
                     ],
                   ),
@@ -1187,25 +1193,27 @@ class _HomePageState extends State<HomePage> {
                       const SizedBox(
                         width: 10,
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Tips Sehat Selama Pandemi',
-                            style: subHeading.copyWith(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Tips Sehat Selama Pandemi',
+                              style: subHeading.copyWith(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
-                          ),
-                          Text(
-                            'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: subHeading.copyWith(
-                              fontSize: 10,
+                            Text(
+                              'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: subHeading.copyWith(
+                                fontSize: 10,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       )
                     ],
                   ),
@@ -1239,25 +1247,27 @@ class _HomePageState extends State<HomePage> {
                       const SizedBox(
                         width: 10,
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Tips Sehat Selama Pandemi',
-                            style: subHeading.copyWith(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Tips Sehat Selama Pandemi',
+                              style: subHeading.copyWith(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
-                          ),
-                          Text(
-                            'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: subHeading.copyWith(
-                              fontSize: 10,
+                            Text(
+                              'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: subHeading.copyWith(
+                                fontSize: 10,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       )
                     ],
                   ),
@@ -1291,25 +1301,27 @@ class _HomePageState extends State<HomePage> {
                       const SizedBox(
                         width: 10,
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Tips Sehat Selama Pandemi',
-                            style: subHeading.copyWith(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Tips Sehat Selama Pandemi',
+                              style: subHeading.copyWith(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
-                          ),
-                          Text(
-                            'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: subHeading.copyWith(
-                              fontSize: 10,
+                            Text(
+                              'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: subHeading.copyWith(
+                                fontSize: 10,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       )
                     ],
                   ),

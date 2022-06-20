@@ -121,21 +121,23 @@ class RegisterPage extends StatelessWidget {
               const SizedBox(
                 height: 29,
               ),
-              Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Image.asset(
-                      "assets/images/Line.png",
-                    ),
-                    Text(
-                      "atau masuk dengan",
-                      style: blackReguler.copyWith(fontSize: 18),
-                    ),
-                    Image.asset(
-                      "assets/images/Line.png",
-                    ),
-                  ],
+              Flexible(
+                child: Container(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Image.asset(
+                        "assets/images/Line.png",
+                      ),
+                      Text(
+                        "atau masuk dengan",
+                        style: blackReguler.copyWith(fontSize: 18),
+                      ),
+                      Image.asset(
+                        "assets/images/Line.png",
+                      ),
+                    ],
+                  ),
                 ),
               ),
               const SizedBox(
