@@ -107,23 +107,15 @@ class LoginPage extends StatelessWidget {
                       const SizedBox(
                         height: 82,
                       ),
-                      Flexible(
-                        child: Container(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Image.asset(
-                                "assets/images/Line.png",
-                              ),
-                              Text(
-                                "atau masuk dengan",
-                                style: blackReguler.copyWith(fontSize: 18),
-                              ),
-                              Image.asset(
-                                "assets/images/Line.png",
-                              ),
-                            ],
-                          ),
+                      Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Text(
+                              "atau masuk dengan",
+                              style: blackReguler.copyWith(fontSize: 18),
+                            ),
+                          ],
                         ),
                       ),
                       const SizedBox(

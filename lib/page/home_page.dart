@@ -1035,73 +1035,23 @@ class _HomePageState extends State<HomePage> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              'Tips Sehat Selama Pandemi',
-                              style: subHeading.copyWith(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500,
+                            Flexible(
+                              child: Text(
+                                'Tips Sehat Selama Pandemi',
+                                style: subHeading.copyWith(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
                             ),
-                            Text(
-                              'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: subHeading.copyWith(
-                                fontSize: 10,
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  height: 70,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 1,
-                        blurRadius: 9,
-                        offset:
-                            const Offset(1, 3), // changes position of shadow
-                      ),
-                    ],
-                  ),
-                  child: Row(
-                    children: [
-                      Image.asset(
-                        "assets/images/news.jpeg",
-                        height: 50,
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Tips Sehat Selama Pandemi',
-                              style: subHeading.copyWith(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                            Text(
-                              'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: subHeading.copyWith(
-                                fontSize: 10,
+                            Flexible(
+                              child: Text(
+                                'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: subHeading.copyWith(
+                                  fontSize: 10,
+                                ),
                               ),
                             ),
                           ],
@@ -1143,73 +1093,23 @@ class _HomePageState extends State<HomePage> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              'Tips Sehat Selama Pandemi',
-                              style: subHeading.copyWith(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500,
+                            Flexible(
+                              child: Text(
+                                'Tips Sehat Selama Pandemi',
+                                style: subHeading.copyWith(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
                             ),
-                            Text(
-                              'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: subHeading.copyWith(
-                                fontSize: 10,
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  height: 70,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 1,
-                        blurRadius: 9,
-                        offset:
-                            const Offset(1, 3), // changes position of shadow
-                      ),
-                    ],
-                  ),
-                  child: Row(
-                    children: [
-                      Image.asset(
-                        "assets/images/news.jpeg",
-                        height: 50,
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Tips Sehat Selama Pandemi',
-                              style: subHeading.copyWith(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                            Text(
-                              'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: subHeading.copyWith(
-                                fontSize: 10,
+                            Flexible(
+                              child: Text(
+                                'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: subHeading.copyWith(
+                                  fontSize: 10,
+                                ),
                               ),
                             ),
                           ],
@@ -1251,19 +1151,23 @@ class _HomePageState extends State<HomePage> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              'Tips Sehat Selama Pandemi',
-                              style: subHeading.copyWith(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500,
+                            Flexible(
+                              child: Text(
+                                'Tips Sehat Selama Pandemi',
+                                style: subHeading.copyWith(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
                             ),
-                            Text(
-                              'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: subHeading.copyWith(
-                                fontSize: 10,
+                            Flexible(
+                              child: Text(
+                                'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: subHeading.copyWith(
+                                  fontSize: 10,
+                                ),
                               ),
                             ),
                           ],
@@ -1305,19 +1209,139 @@ class _HomePageState extends State<HomePage> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              'Tips Sehat Selama Pandemi',
-                              style: subHeading.copyWith(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500,
+                            Flexible(
+                              child: Text(
+                                'Tips Sehat Selama Pandemi',
+                                style: subHeading.copyWith(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
                             ),
-                            Text(
-                              'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: subHeading.copyWith(
-                                fontSize: 10,
+                            Flexible(
+                              child: Text(
+                                'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: subHeading.copyWith(
+                                  fontSize: 10,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  height: 70,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 1,
+                        blurRadius: 9,
+                        offset:
+                            const Offset(1, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        "assets/images/news.jpeg",
+                        height: 50,
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Flexible(
+                              child: Text(
+                                'Tips Sehat Selama Pandemi',
+                                style: subHeading.copyWith(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                            Flexible(
+                              child: Text(
+                                'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: subHeading.copyWith(
+                                  fontSize: 10,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  height: 70,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 1,
+                        blurRadius: 9,
+                        offset:
+                            const Offset(1, 3), // changes position of shadow
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        "assets/images/news.jpeg",
+                        height: 50,
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Flexible(
+                              child: Text(
+                                'Tips Sehat Selama Pandemi',
+                                style: subHeading.copyWith(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                            Flexible(
+                              child: Text(
+                                'Meningkatnya kasus aktif Covid-19 yang diperparah\n dengan peralihan musim yang saat ini terjadi.....',
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: subHeading.copyWith(
+                                  fontSize: 10,
+                                ),
                               ),
                             ),
                           ],
