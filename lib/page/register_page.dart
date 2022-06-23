@@ -126,16 +126,12 @@ class RegisterPage extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Image.asset(
-                        "assets/images/Line.png",
-                      ),
+                      
                       Text(
                         "atau masuk dengan",
                         style: blackReguler.copyWith(fontSize: 18),
                       ),
-                      Image.asset(
-                        "assets/images/Line.png",
-                      ),
+                      
                     ],
                   ),
                 ),
