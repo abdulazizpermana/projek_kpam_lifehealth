@@ -14,6 +14,7 @@ class RegisterPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
+            mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               const SizedBox(
@@ -123,16 +124,9 @@ class RegisterPage extends StatelessWidget {
               ),
               Flexible(
                 child: Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      
-                      Text(
-                        "atau masuk dengan",
-                        style: blackReguler.copyWith(fontSize: 18),
-                      ),
-                      
-                    ],
+                  child: Text(
+                    "atau masuk dengan",
+                    style: blackReguler.copyWith(fontSize: 18),
                   ),
                 ),
               ),
